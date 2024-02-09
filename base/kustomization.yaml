@@ -1,8 +1,8 @@
 resources:
 - dir_volume.yaml
-- nginx_LoadBalancer.yaml
-- nginx_configMap.yaml
-- nginx_deployment.yaml
+#- nginx_LoadBalancer.yaml
+#- nginx_configMap.yaml
+#- nginx_deployment.yaml
 - php_deployment.yaml
 - php_service.yaml
 - caddy_LoadBalancer.yaml
