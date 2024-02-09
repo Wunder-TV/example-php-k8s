@@ -1,5 +1,3 @@
-namePrefix: kustomize-
-
 resources:
 - dir_volume.yaml
 - kustomization.yaml
