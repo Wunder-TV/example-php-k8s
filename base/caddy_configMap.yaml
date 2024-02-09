@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: caddy-config
+  labels:
+    tier: backend
+data:
+  config : |
+    :80 {
+      root * /dir
+      php_fastcgi php:9000
+      encode zstd gzip
+      file_server
+    }
+
+    # enable logoutput to stdout/stderr
+    log
