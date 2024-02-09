@@ -1,0 +1,9 @@
+- demo PHP ohne Datenbank
+    - kubectl apply -f php_service.yaml
+    - kubectl apply -f dir_volume.yaml
+    - kubectl apply -f php_deployment.yaml
+    - kubectl apply -f nginx_configMap.yaml
+    - kubectl apply nginx_deployment.yaml
+    - kubectl apply -f nginx_LoadBalancer.yaml
+    - kubectl get svc nginx -o yaml -o jsonpath='{.status.loadBalancer.ingress}'
+    - curl https://<IP>
