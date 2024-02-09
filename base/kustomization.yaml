@@ -5,3 +5,6 @@ resources:
 - nginx_deployment.yaml
 - php_deployment.yaml
 - php_service.yaml
+- caddy_LoadBalancer.yaml
+- caddy_configMap.yaml
+- caddy_deployment.yaml
