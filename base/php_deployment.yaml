@@ -32,8 +32,9 @@ spec:
         volumeMounts:
         - name: dir
           mountPath: /dir
-        command:
-        - wget
-        - "-O"
-        - "/deploy.sh"
-        - "https://raw.githubusercontent.com/Wunder-TV/example-php-k8s/main/deploy.sh"
+        command: ["/bin/sh", "-c"]
+        args:
+        - |
+          wget -O /dir/deploy.sh "https://raw.githubusercontent.com/Wunder-TV/example-php-k8s/main/deploy.sh" &&
+          chmod +x /dir/deploy.sh &&
+          /dir/deploy.sh
