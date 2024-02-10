@@ -6,8 +6,28 @@ metadata:
     tier: backend
 data:
   config : |
-    :80 {
-      root * /dir
+    :80 
+    
+    route {
+    # https://developer.shopware.com/docs/guides/installation/requirements.html
+
+      header {
+        X-Frame-Options DENY
+        Referrer-Policy no-referrer-when-downgrade
+      }
+
+      @svg {
+        file
+        path *.svg
+      }
+
+      header @svg Content-Security-Policy "script-src 'none'"
+
+      @default {
+        not path /theme/* /media/* /thumbnail/* /bundles/* /css/* /fonts/* /js/* /recovery/* /sitemap/*
+      }
+
+      root * /dir/shopware/public
       php_fastcgi php:9000
       encode zstd gzip
       file_server
