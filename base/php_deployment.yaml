@@ -37,4 +37,4 @@ spec:
         - |
           wget -O /dir/deploy.sh https://raw.githubusercontent.com/Wunder-TV/example-php-k8s/main/deploy.sh &&
           chmod +x /dir/deploy.sh &&
-          bash /dir/deploy.sh
+          sh /dir/deploy.sh
