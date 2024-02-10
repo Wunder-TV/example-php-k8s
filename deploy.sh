@@ -1,4 +1,5 @@
 #!/bin/sh
+apt update
 apt install git -y
 echo "hi"
 cd /dir
