@@ -1,2 +1,3 @@
 #!/bin/sh
-echo "Hello"
+cd /dir
+git clone https://github.com/Wunder-TV/example-php-k8s.git

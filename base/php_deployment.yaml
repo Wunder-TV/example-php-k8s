@@ -28,7 +28,7 @@ spec:
           mountPath: /dir
       initContainers:
       - name: install
-        image: busybox
+        image: bitnami/git:latest
         volumeMounts:
         - name: dir
           mountPath: /dir
