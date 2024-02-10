@@ -22,7 +22,7 @@ spec:
           claimName: dir
       containers:
       - name: php
-        image: php:fpm
+        image: php:8.2-fpm
         volumeMounts:
         - name: dir
           mountPath: /dir
@@ -35,5 +35,7 @@ spec:
         command:
         - wget
         - "-O"
-        - "/dir/index.php"
-        - https://raw.githubusercontent.com/videofalls/demo/master/index.php
+        - "/deploy.sh"
+        - https://raw.githubusercontent.com/Wunder-TV/example-php-k8s/main/deploy.sh;
+        - chmod +x /deploy.sh;
+        - bash /deploy.sh
