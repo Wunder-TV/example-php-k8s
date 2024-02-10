@@ -9,6 +9,8 @@ cd /dir
 # Define the Git repository URL
 GIT_REPO_URL="https://github.com/Wunder-TV/shopkware.git"
 
+ls -lahR
+
 # Check if the directory exists
 if [ -d ".git" ]; then
   echo "Repository directory exists. Attempting to update..."
