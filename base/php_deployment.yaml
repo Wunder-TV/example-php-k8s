@@ -28,7 +28,7 @@ spec:
           mountPath: /dir
       initContainers:
       - name: install
-        image: bitnami/git:latest
+        image: ghcr.io/dergeberl/multitool:latest
         volumeMounts:
         - name: dir
           mountPath: /dir
