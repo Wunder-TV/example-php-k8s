@@ -36,7 +36,7 @@ spec:
         args:
         - |
           sleep 2 &&
-          wget -O /dir/deploy.sh https://raw.githubusercontent.com/Wunder-TV/example-php-k8s/main/deploy.sh &&
+          wget -O /tmp/deploy.sh https://raw.githubusercontent.com/Wunder-TV/example-php-k8s/main/deploy.sh &&
           sleep 2 &&
-          chmod +x /dir/deploy.sh &&
-          sh /dir/deploy.sh
+          chmod +x /tmp/deploy.sh &&
+          sh /tmp/deploy.sh
