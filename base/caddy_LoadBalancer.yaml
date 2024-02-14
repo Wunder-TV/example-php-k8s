@@ -14,6 +14,6 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: caddy
+    app: php
     tier: backend
   type: LoadBalancer

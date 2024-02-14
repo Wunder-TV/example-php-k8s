@@ -20,12 +20,27 @@ spec:
       - name: dir
         persistentVolumeClaim:
           claimName: dir
+      - name: config
+        configMap:
+          name: caddy-config
+          items:
+          - key: config
+            path: Caddyfile
       containers:
       - name: php
         image: php:8.2-fpm
         volumeMounts:
         - name: dir
           mountPath: /dir
+      - name: caddy
+        image: caddy:latest
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: dir
+          mountPath: /dir
+        - name: config
+          mountPath: /etc/caddy
       initContainers:
       - name: install
         image: ghcr.io/dergeberl/multitool:latest
